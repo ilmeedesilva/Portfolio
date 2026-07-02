@@ -1,7 +1,4 @@
 import Script from 'next/script';
-import { StaticMarkup } from '@/components/StaticMarkup';
-
-const resumeReviewerMarkup = "<header class=\"topbar\" data-header>\n      <a class=\"brand\" href=\"https://ilmeedesilva.vercel.app/\" aria-label=\"Ilmee De Silva portfolio\">\n        <img class=\"nav-avatar\" src=\"/assets/profile.png\" alt=\"Ilmee De Silva\" />\n        <span>\n          <strong>Ilmee De Silva</strong>\n          <small>AI Resume Reviewer</small>\n        </span>\n      </a>\n      <nav class=\"site-nav\" aria-label=\"Resume reviewer navigation\">\n        <a href=\"#review\">Review</a>\n        <a href=\"#results\">Results</a>\n        <a href=\"#how\">Workflow</a>\n        <a href=\"https://ilmeedesilva.vercel.app/\">Portfolio</a>\n        <button class=\"theme-toggle\" type=\"button\" data-theme-toggle aria-label=\"Switch to dark mode\" aria-pressed=\"false\">\n          <span class=\"theme-icon sun\" aria-hidden=\"true\">\u263c</span>\n          <span class=\"theme-thumb\" aria-hidden=\"true\"></span>\n          <span class=\"theme-icon moon\" aria-hidden=\"true\">\u25d0</span>\n        </button>\n      </nav>\n    </header>\n\n    <main>\n      <section class=\"hero reveal\" aria-label=\"AI Resume Reviewer introduction\">\n        <div class=\"hero-content\">\n          <p class=\"eyebrow\">Portfolio Product | Resume Intelligence</p>\n          <h1>Review your resume against a real job description.</h1>\n          <p class=\"hero-copy\">\n            Upload documents or paste text to get a practical match score, keyword gaps,\n            strengths, improvement ideas, and interview questions. Built as part of Ilmee's\n            backend, AI, API, and product engineering portfolio.\n          </p>\n          <div class=\"hero-actions\">\n            <a class=\"button primary\" href=\"#review\">Start Analysis</a>\n            <a class=\"button secondary\" href=\"https://ilmeedesilva.vercel.app/#projects\">View Portfolio</a>\n          </div>\n        </div>\n        <aside class=\"product-card\" aria-label=\"Product capabilities\">\n          <div class=\"product-orb\" aria-hidden=\"true\">AI</div>\n          <p>Live document workflow</p>\n          <h2>Resume + JD match engine</h2>\n          <div class=\"capability-grid\">\n            <span>PDF</span>\n            <span>DOCX</span>\n            <span>TXT</span>\n            <span>AI API</span>\n          </div>\n        </aside>\n      </section>\n\n      <section class=\"metrics-strip reveal\" aria-label=\"Product highlights\">\n        <div>\n          <span>Inputs</span>\n          <strong>Upload or paste</strong>\n        </div>\n        <div>\n          <span>Analysis</span>\n          <strong>AI with local fallback</strong>\n        </div>\n        <div>\n          <span>Output</span>\n          <strong>Score, gaps, next steps</strong>\n        </div>\n      </section>\n\n      <section class=\"review-shell\" id=\"review\">\n        <div class=\"panel input-panel reveal\">\n          <div class=\"section-title\">\n            <p class=\"eyebrow\">Step 01 | Add Documents</p>\n            <h2>Upload files or paste the text.</h2>\n            <p>\n              Use PDF, DOCX, TXT, Markdown, CSV, or JSON files. You can also type directly\n              into either field when you want to test a quick edit.\n            </p>\n          </div>\n\n          <div class=\"parser-status\" data-parser-status>\n            Parsers ready for text files. PDF/DOCX parsers load from CDN when the page opens.\n          </div>\n\n          <div class=\"input-grid\">\n            <article class=\"document-card\">\n              <div class=\"document-head\">\n                <div class=\"step-icon\" aria-hidden=\"true\">01</div>\n                <div>\n                  <label for=\"resume\">Resume</label>\n                  <p>Upload your resume or paste/write the latest version.</p>\n                </div>\n                <button class=\"text-button\" type=\"button\" data-clear=\"resume\">Clear</button>\n              </div>\n              <label class=\"upload-box\" for=\"resume-file\">\n                <input\n                  id=\"resume-file\"\n                  type=\"file\"\n                  accept=\".txt,.md,.csv,.json,.pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,text/markdown,text/csv,application/json\"\n                  data-file-input=\"resume\"\n                />\n                <span>Upload resume file</span>\n                <small data-file-status=\"resume\">No file selected</small>\n              </label>\n              <textarea id=\"resume\" placeholder=\"Paste or write your resume text here...\"></textarea>\n              <div class=\"input-meta\">\n                <span data-count=\"resume\">0 words</span>\n                <span>Resume content</span>\n              </div>\n            </article>\n\n            <article class=\"document-card\">\n              <div class=\"document-head\">\n                <div class=\"step-icon\" aria-hidden=\"true\">02</div>\n                <div>\n                  <label for=\"job\">Job description</label>\n                  <p>Upload the target job post or paste/write the description.</p>\n                </div>\n                <button class=\"text-button\" type=\"button\" data-clear=\"job\">Clear</button>\n              </div>\n              <label class=\"upload-box\" for=\"job-file\">\n                <input\n                  id=\"job-file\"\n                  type=\"file\"\n                  accept=\".txt,.md,.csv,.json,.pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,text/markdown,text/csv,application/json\"\n                  data-file-input=\"job\"\n                />\n                <span>Upload JD file</span>\n                <small data-file-status=\"job\">No file selected</small>\n              </label>\n              <textarea id=\"job\" placeholder=\"Paste or write the job description here...\"></textarea>\n              <div class=\"input-meta\">\n                <span data-count=\"job\">0 words</span>\n                <span>Job description content</span>\n              </div>\n            </article>\n          </div>\n\n          <div class=\"action-row\">\n            <button class=\"button primary analyze-button\" type=\"button\" data-analyze>Analyze Match</button>\n            <p>Runs AI analysis when available, then falls back to local keyword matching.</p>\n          </div>\n        </div>\n\n        <aside class=\"panel result-panel reveal\" id=\"results\" aria-live=\"polite\">\n          <div class=\"section-title compact\">\n            <p class=\"eyebrow\">Step 02 | Results</p>\n            <h2>Actionable feedback.</h2>\n          </div>\n          <div class=\"score-card\">\n            <span>Match Score</span>\n            <strong data-score>--</strong>\n            <p data-score-label>Add a resume and job description to begin.</p>\n          </div>\n\n          <div class=\"result-grid\">\n            <section>\n              <h3>Top Missing Keywords</h3>\n              <ul data-missing>\n                <li>Waiting for analysis</li>\n              </ul>\n            </section>\n            <section>\n              <h3>Resume Strengths</h3>\n              <ul data-strengths>\n                <li>Waiting for analysis</li>\n              </ul>\n            </section>\n            <section>\n              <h3>Suggested Improvements</h3>\n              <ul data-suggestions>\n                <li>Waiting for analysis</li>\n              </ul>\n            </section>\n            <section>\n              <h3>Interview Questions</h3>\n              <ul data-questions>\n                <li>Waiting for analysis</li>\n              </ul>\n            </section>\n          </div>\n        </aside>\n      </section>\n\n      <section class=\"how reveal\" id=\"how\">\n        <div class=\"section-title centered\">\n          <p class=\"eyebrow\">Workflow</p>\n          <h2>A simple product flow with real engineering underneath.</h2>\n          <p>\n            The interface stays friendly for candidates while the workflow demonstrates\n            document parsing, API thinking, fallback behavior, and useful output design.\n          </p>\n        </div>\n        <div class=\"how-grid\">\n          <article>\n            <span>01</span>\n            <h3>Parse</h3>\n            <p>Extract readable text from PDF, DOCX, and text-based files in the browser.</p>\n          </article>\n          <article>\n            <span>02</span>\n            <h3>Analyze</h3>\n            <p>Compare resume evidence with role requirements using AI or local matching.</p>\n          </article>\n          <article>\n            <span>03</span>\n            <h3>Improve</h3>\n            <p>Turn the gaps into clearer bullets, stronger keywords, and interview prep.</p>\n          </article>\n        </div>\n      </section>\n    </main>\n\n    <footer class=\"site-footer\">\n      <div>\n        <strong>AI Resume Reviewer</strong>\n        <p>A portfolio product by Ilmee De Silva.</p>\n      </div>\n      <nav aria-label=\"Footer navigation\">\n        <a href=\"https://ilmeedesilva.vercel.app/\">Portfolio</a>\n        <a href=\"https://github.com/ilmeedesilva\" target=\"_blank\" rel=\"noreferrer\">GitHub</a>\n        <a href=\"https://www.linkedin.com/in/ilmeedesilva/\" target=\"_blank\" rel=\"noreferrer\">LinkedIn</a>\n        <a href=\"mailto:ilmeedesilva@gmail.com\">Email</a>\n      </nav>\n    </footer>";
 
 export const metadata = {
   title: 'AI Resume Reviewer | Ilmee De Silva',
@@ -13,7 +10,226 @@ export default function ResumeReviewerPage() {
   return (
     <>
       <link rel="stylesheet" href="/legacy/resume-reviewer.css" />
-      <StaticMarkup html={resumeReviewerMarkup} />
+      <header className="topbar" data-header>
+            <a className="brand" href="https://ilmeedesilva.vercel.app/" aria-label="Ilmee De Silva portfolio">
+              <img className="nav-avatar" src="/assets/profile.png" alt="Ilmee De Silva" />
+              <span>
+                <strong>Ilmee De Silva</strong>
+                <small>AI Resume Reviewer</small>
+              </span>
+            </a>
+            <nav className="site-nav" aria-label="Resume reviewer navigation">
+              <a href="#review">Review</a>
+              <a href="#results">Results</a>
+              <a href="#how">Workflow</a>
+              <a href="https://ilmeedesilva.vercel.app/">Portfolio</a>
+              <button className="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+                <span className="theme-icon sun" aria-hidden="true">☼</span>
+                <span className="theme-thumb" aria-hidden="true"></span>
+                <span className="theme-icon moon" aria-hidden="true">◐</span>
+              </button>
+            </nav>
+          </header>
+
+          <main>
+            <section className="hero reveal" aria-label="AI Resume Reviewer introduction">
+              <div className="hero-content">
+                <p className="eyebrow">Portfolio Product | Resume Intelligence</p>
+                <h1>Review your resume against a real job description.</h1>
+                <p className="hero-copy">
+                  Upload documents or paste text to get a practical match score, keyword gaps,
+                  strengths, improvement ideas, and interview questions. Built as part of Ilmee's
+                  backend, AI, API, and product engineering portfolio.
+                </p>
+                <div className="hero-actions">
+                  <a className="button primary" href="#review">Start Analysis</a>
+                  <a className="button secondary" href="https://ilmeedesilva.vercel.app/#projects">View Portfolio</a>
+                </div>
+              </div>
+              <aside className="product-card" aria-label="Product capabilities">
+                <div className="product-orb" aria-hidden="true">AI</div>
+                <p>Live document workflow</p>
+                <h2>Resume + JD match engine</h2>
+                <div className="capability-grid">
+                  <span>PDF</span>
+                  <span>DOCX</span>
+                  <span>TXT</span>
+                  <span>AI API</span>
+                </div>
+              </aside>
+            </section>
+
+            <section className="metrics-strip reveal" aria-label="Product highlights">
+              <div>
+                <span>Inputs</span>
+                <strong>Upload or paste</strong>
+              </div>
+              <div>
+                <span>Analysis</span>
+                <strong>AI with local fallback</strong>
+              </div>
+              <div>
+                <span>Output</span>
+                <strong>Score, gaps, next steps</strong>
+              </div>
+            </section>
+
+            <section className="review-shell" id="review">
+              <div className="panel input-panel reveal">
+                <div className="section-title">
+                  <p className="eyebrow">Step 01 | Add Documents</p>
+                  <h2>Upload files or paste the text.</h2>
+                  <p>
+                    Use PDF, DOCX, TXT, Markdown, CSV, or JSON files. You can also type directly
+                    into either field when you want to test a quick edit.
+                  </p>
+                </div>
+
+                <div className="parser-status" data-parser-status>
+                  Parsers ready for text files. PDF/DOCX parsers load from CDN when the page opens.
+                </div>
+
+                <div className="input-grid">
+                  <article className="document-card">
+                    <div className="document-head">
+                      <div className="step-icon" aria-hidden="true">01</div>
+                      <div>
+                        <label htmlFor="resume">Resume</label>
+                        <p>Upload your resume or paste/write the latest version.</p>
+                      </div>
+                      <button className="text-button" type="button" data-clear="resume">Clear</button>
+                    </div>
+                    <label className="upload-box" htmlFor="resume-file">
+                      <input
+                        id="resume-file"
+                        type="file"
+                        accept=".txt,.md,.csv,.json,.pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,text/markdown,text/csv,application/json"
+                        data-file-input="resume"
+                      />
+                      <span>Upload resume file</span>
+                      <small data-file-status="resume">No file selected</small>
+                    </label>
+                    <textarea id="resume" placeholder="Paste or write your resume text here..."></textarea>
+                    <div className="input-meta">
+                      <span data-count="resume">0 words</span>
+                      <span>Resume content</span>
+                    </div>
+                  </article>
+
+                  <article className="document-card">
+                    <div className="document-head">
+                      <div className="step-icon" aria-hidden="true">02</div>
+                      <div>
+                        <label htmlFor="job">Job description</label>
+                        <p>Upload the target job post or paste/write the description.</p>
+                      </div>
+                      <button className="text-button" type="button" data-clear="job">Clear</button>
+                    </div>
+                    <label className="upload-box" htmlFor="job-file">
+                      <input
+                        id="job-file"
+                        type="file"
+                        accept=".txt,.md,.csv,.json,.pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,text/markdown,text/csv,application/json"
+                        data-file-input="job"
+                      />
+                      <span>Upload JD file</span>
+                      <small data-file-status="job">No file selected</small>
+                    </label>
+                    <textarea id="job" placeholder="Paste or write the job description here..."></textarea>
+                    <div className="input-meta">
+                      <span data-count="job">0 words</span>
+                      <span>Job description content</span>
+                    </div>
+                  </article>
+                </div>
+
+                <div className="action-row">
+                  <button className="button primary analyze-button" type="button" data-analyze>Analyze Match</button>
+                  <p>Runs AI analysis when available, then falls back to local keyword matching.</p>
+                </div>
+              </div>
+
+              <aside className="panel result-panel reveal" id="results" aria-live="polite">
+                <div className="section-title compact">
+                  <p className="eyebrow">Step 02 | Results</p>
+                  <h2>Actionable feedback.</h2>
+                </div>
+                <div className="score-card">
+                  <span>Match Score</span>
+                  <strong data-score>--</strong>
+                  <p data-score-label>Add a resume and job description to begin.</p>
+                </div>
+
+                <div className="result-grid">
+                  <section>
+                    <h3>Top Missing Keywords</h3>
+                    <ul data-missing>
+                      <li>Waiting for analysis</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h3>Resume Strengths</h3>
+                    <ul data-strengths>
+                      <li>Waiting for analysis</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h3>Suggested Improvements</h3>
+                    <ul data-suggestions>
+                      <li>Waiting for analysis</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h3>Interview Questions</h3>
+                    <ul data-questions>
+                      <li>Waiting for analysis</li>
+                    </ul>
+                  </section>
+                </div>
+              </aside>
+            </section>
+
+            <section className="how reveal" id="how">
+              <div className="section-title centered">
+                <p className="eyebrow">Workflow</p>
+                <h2>A simple product flow with real engineering underneath.</h2>
+                <p>
+                  The interface stays friendly for candidates while the workflow demonstrates
+                  document parsing, API thinking, fallback behavior, and useful output design.
+                </p>
+              </div>
+              <div className="how-grid">
+                <article>
+                  <span>01</span>
+                  <h3>Parse</h3>
+                  <p>Extract readable text from PDF, DOCX, and text-based files in the browser.</p>
+                </article>
+                <article>
+                  <span>02</span>
+                  <h3>Analyze</h3>
+                  <p>Compare resume evidence with role requirements using AI or local matching.</p>
+                </article>
+                <article>
+                  <span>03</span>
+                  <h3>Improve</h3>
+                  <p>Turn the gaps into clearer bullets, stronger keywords, and interview prep.</p>
+                </article>
+              </div>
+            </section>
+          </main>
+
+          <footer className="site-footer">
+            <div>
+              <strong>AI Resume Reviewer</strong>
+              <p>A portfolio product by Ilmee De Silva.</p>
+            </div>
+            <nav aria-label="Footer navigation">
+              <a href="https://ilmeedesilva.vercel.app/">Portfolio</a>
+              <a href="https://github.com/ilmeedesilva" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/ilmeedesilva/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="mailto:ilmeedesilva@gmail.com">Email</a>
+            </nav>
+          </footer>
       <Script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js" strategy="afterInteractive" />
       <Script src="https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js" strategy="afterInteractive" />
       <Script src="/legacy/resume-reviewer.js" strategy="afterInteractive" />

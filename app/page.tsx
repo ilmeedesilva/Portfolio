@@ -1,12 +1,319 @@
 import { PortfolioBehavior } from '@/components/PortfolioBehavior';
-import { StaticMarkup } from '@/components/StaticMarkup';
-
-const portfolioMarkup = "<header class=\"site-header\" data-header>\n      <a class=\"brand\" href=\"#home\" aria-label=\"Ilmee De Silva home\">\n        <img class=\"nav-avatar\" src=\"/assets/profile.png\" alt=\"Ilmee De Silva\" />\n        <span>Ilmee De Silva</span>\n      </a>\n      <button class=\"nav-toggle\" type=\"button\" aria-label=\"Open navigation\" data-nav-toggle>\n        <span></span>\n        <span></span>\n      </button>\n      <nav class=\"site-nav\" data-nav>\n        <a href=\"#profile\">Profile</a>\n        <a href=\"#projects\">Projects</a>\n        <a href=\"#proof\">Proof</a>\n        <a href=\"#skills\">Skills</a>\n        <a href=\"#writing\">Writing</a>\n        <a class=\"nav-cta\" href=\"#contact\">Contact</a>\n        <button class=\"theme-toggle\" type=\"button\" data-theme-toggle aria-label=\"Switch to dark mode\" aria-pressed=\"false\"><span class=\"theme-icon sun\" aria-hidden=\"true\">\u263c</span><span class=\"theme-thumb\" aria-hidden=\"true\"></span><span class=\"theme-icon moon\" aria-hidden=\"true\">\u25d0</span></button>\n      </nav>\n    </header>\n\n    <main>\n      <section class=\"hero\" id=\"home\" aria-label=\"Introduction\">\n        <img\n          class=\"hero-image\"\n          src=\"/assets/engineering-hero.png\"\n          alt=\"Modern engineering workspace with code, APIs, database tables, and AI system diagrams\"\n        />\n        <div class=\"hero-overlay\"></div>\n        <div class=\"hero-shell\">\n        <div class=\"hero-content\">\n          <p class=\"eyebrow\">Full-Stack Software Engineer | Backend \u2022 AI \u2022 Cloud</p>\n          <h1><span>Full-Stack Software Engineer</span> focused on Backend, AI & Cloud Systems.</h1>\n          <div class=\"hero-copy\">\n            <p>\n              I build reliable backend systems, practical AI-powered applications,\n              REST APIs, database-driven workflows, and clean full-stack user experiences.\n            </p>\n            <p>\n              My strongest area is backend engineering, with hands-on experience across\n              APIs, databases, cloud integrations, and intelligent document-based systems.\n            </p>\n          </div>\n          <div class=\"hero-actions\">\n            <a class=\"button primary\" href=\"#projects\">View Projects</a>\n            <a class=\"button secondary\" href=\"#contact\">Get In Touch</a>\n          </div>\n          <dl class=\"proof-strip\" aria-label=\"Profile highlights\">\n            <div>\n              <dt>Current Focus</dt>\n              <dd>Full-stack with backend focus</dd>\n            </div>\n            <div>\n              <dt>Core Stack</dt>\n              <dd>Python, FastAPI, React, Azure</dd>\n            </div>\n            <div>\n              <dt>Best At</dt>\n              <dd>APIs, data, cloud and AI</dd>\n            </div>\n          </dl>\n        </div>\n        <figure class=\"hero-portrait\" aria-label=\"Profile picture\">\n          <div class=\"portrait-frame\">\n            <img src=\"/assets/profile.png\" alt=\"Ilmee De Silva\" onerror=\"this.hidden=true; this.parentElement.classList.add('is-placeholder')\" />\n          </div>\n        </figure>\n        </div>\n      </section>\n\n      <section class=\"section profile-section\" id=\"profile\">\n        <div class=\"section-heading\">\n          <p class=\"eyebrow\">Profile</p>\n          <h2>Full-stack capability with a strong backend engineering center.</h2>\n        </div>\n        <div class=\"profile-panel\">\n          <div class=\"profile-summary\">\n            <p class=\"profile-kicker\">Ilmee De Silva</p>\n            <h3>Full-Stack Software Engineer mainly focused on backend engineering, AI-powered systems, APIs, databases, and cloud integrations.</h3>\n            <p>\n              I can work across the full stack, while my strongest area is designing\n              reliable backend systems and connecting them to useful, clean user experiences.\n            </p>\n          </div>\n          <div class=\"profile-grid\">\n            <a class=\"profile-item\" href=\"#home\"><span class=\"profile-icon\" aria-hidden=\"true\">\u25cc</span><span><strong>Name</strong>Ilmee De Silva</span></a>\n            <a class=\"profile-item\" href=\"#projects\"><span class=\"profile-icon\" aria-hidden=\"true\">\u2318</span><span><strong>Role</strong>Full-Stack Software Engineer</span></a>\n            <a class=\"profile-item\" href=\"#skills\"><span class=\"profile-icon\" aria-hidden=\"true\">\u25a6</span><span><strong>Main Focus</strong>Backend Engineering</span></a>\n            <a class=\"profile-item\" href=\"#contact\"><span class=\"profile-icon\" aria-hidden=\"true\">\u2316</span><span><strong>Location</strong>Sri Lanka</span></a>\n            <a class=\"profile-item\" href=\"tel:+94772909244\"><span class=\"profile-icon\" aria-hidden=\"true\">\u260e</span><span><strong>Phone</strong>+94 77 290 9244</span></a>\n            <a class=\"profile-item\" href=\"mailto:ilmeedesilva@gmail.com\"><span class=\"profile-icon\" aria-hidden=\"true\">@</span><span><strong>Email</strong>ilmeedesilva@gmail.com</span></a>\n            <a class=\"profile-item\" href=\"#skills\"><span class=\"profile-icon\" aria-hidden=\"true\">\u2302</span><span><strong>Degree</strong>BSc (Hons) in Computing \u2014 Software Engineering</span></a>\n            <a class=\"profile-item\" href=\"#skills\"><span class=\"profile-icon\" aria-hidden=\"true\">\u2726</span><span><strong>Skills Focus</strong>FastAPI, Python, SQL, React, Next.js, Azure AI, REST APIs</span></a>\n            <a class=\"profile-item\" href=\"https://www.linkedin.com/in/ilmeedesilva/\" target=\"_blank\" rel=\"noreferrer\"><span class=\"profile-icon\" aria-hidden=\"true\">in</span><span><strong>LinkedIn</strong>linkedin.com/in/ilmeedesilva</span></a>\n            <a class=\"profile-item\" href=\"https://github.com/ilmeedesilva\" target=\"_blank\" rel=\"noreferrer\"><span class=\"profile-icon\" aria-hidden=\"true\">GH</span><span><strong>GitHub</strong>github.com/ilmeedesilva</span></a>\n            <a class=\"profile-item wide\" href=\"#projects\"><span class=\"profile-icon\" aria-hidden=\"true\">\u2197</span><span><strong>Current Focus</strong>Building AI-powered applications and scalable backend systems.</span></a>\n          </div>\n        </div>\n      </section>\n\n      <section class=\"section\" id=\"projects\">\n        <div class=\"section-heading split\">\n          <div>\n            <p class=\"eyebrow\">Flagship Projects</p>\n            <h2>Selected work shaped like real products.</h2>\n          </div>\n          <a class=\"text-link\" href=\"#contact\">Request walkthrough</a>\n        </div>\n        <div class=\"project-grid\">\n          <article class=\"project-card featured\">\n            <div class=\"card-meta\">\n              <span>In build</span>\n              <span>Portfolio platform</span>\n            </div>\n            <h3>EngineerOS</h3>\n            <p>\n              A personal AI engineering platform combining portfolio, case\n              studies, live demos, writing, and practical career tools in one\n              polished product experience.\n            </p>\n            <div class=\"project-actions\">\n              <a href=\"#contact\">Discuss roadmap</a>\n              <a href=\"#proof\">View proof points</a>\n            </div>\n            <ul class=\"tag-list\">\n              <li>Product Design</li>\n              <li>Backend APIs</li>\n              <li>AI Workflows</li>\n              <li>Portfolio System</li>\n            </ul>\n          </article>\n          <article class=\"project-card\">\n            <div class=\"card-meta\">\n              <span>Planned</span>\n              <span>AI product</span>\n            </div>\n            <h3>AI Resume Reviewer</h3>\n            <p>\n              Upload a resume and compare it with a job description to surface\n              missing keywords, weak bullets, ATS gaps, and interview preparation\n              questions.\n            </p>\n            <div class=\"project-actions\">\n              <a href=\"./apps/resume-reviewer/\">View prototype</a>\n              <a href=\"#contact\">Walkthrough</a>\n            </div>\n            <ul class=\"tag-list\">\n              <li>FastAPI</li>\n              <li>OpenAI</li>\n              <li>Vector Search</li>\n              <li>Reports</li>\n            </ul>\n          </article>\n          <article class=\"project-card\">\n            <div class=\"card-meta\">\n              <span>Planned</span>\n              <span>AI coach</span>\n            </div>\n            <h3>AI Interview Coach</h3>\n            <p>\n              Practice behavioral, technical, and coding interviews with adaptive\n              follow-up questions, scoring, feedback, and a generated improvement\n              plan.\n            </p>\n            <div class=\"project-actions\">\n              <a href=\"#contact\">Walkthrough</a>\n            </div>\n            <ul class=\"tag-list\">\n              <li>Speech</li>\n              <li>Evaluation</li>\n              <li>Authentication</li>\n              <li>Dashboards</li>\n            </ul>\n          </article>\n          <article class=\"project-card\">\n            <div class=\"card-meta\">\n              <span>Experience area</span>\n              <span>Knowledge systems</span>\n            </div>\n            <h3>Engineering Knowledge Hub</h3>\n            <p>\n              A document intelligence system for uploading PDFs and internal\n              docs, indexing them, and asking reliable questions over technical\n              knowledge.\n            </p>\n            <div class=\"project-actions\">\n              <a href=\"#contact\">Walkthrough</a>\n            </div>\n            <ul class=\"tag-list\">\n              <li>Azure AI Search</li>\n              <li>Embeddings</li>\n              <li>Blob Storage</li>\n              <li>RAG</li>\n            </ul>\n          </article>\n        </div>\n      </section>\n\n      <section class=\"section band\" id=\"proof\">\n        <div class=\"section-heading\">\n          <p class=\"eyebrow\">Proof of Work</p>\n          <h2>Each case study is designed to show judgment, not just screenshots.</h2>\n        </div>\n        <div class=\"case-grid\">\n          <article>\n            <span>01</span>\n            <h3>Problem Framing</h3>\n            <p>\n              Clear explanation of the user problem, constraints, data flow, and\n              why the system needs to exist.\n            </p>\n          </article>\n          <article>\n            <span>02</span>\n            <h3>Architecture</h3>\n            <p>\n              API boundaries, storage choices, search/indexing approach, AI flow,\n              and the tradeoffs behind each decision.\n            </p>\n          </article>\n          <article>\n            <span>03</span>\n            <h3>Engineering Quality</h3>\n            <p>\n              README, diagrams, tests, deployment notes, performance thinking,\n              and a usable demo when the project is ready.\n            </p>\n          </article>\n        </div>\n      </section>\n\n      <section class=\"section skills-section\" id=\"skills\">\n        <div class=\"section-heading\">\n          <p class=\"eyebrow\">Capabilities</p>\n          <h2>Full-stack range with backend, AI, API, database, and cloud depth.</h2>\n        </div>\n        <div class=\"skills-grid\">\n          <div>\n            <h3>Backend</h3>\n            <p>Python, FastAPI, REST APIs, service design, validation, integrations, testing.</p>\n          </div>\n          <div>\n            <h3>Data</h3>\n            <p>SQL Server, stored procedures, query thinking, data workflows, reporting logic.</p>\n          </div>\n          <div>\n            <h3>Cloud + AI</h3>\n            <p>Azure AI Search, Azure OpenAI, embeddings, RAG, Blob Storage, document pipelines.</p>\n          </div>\n          <div>\n            <h3>Engineering Practice</h3>\n            <p>Git, Docker basics, API docs, performance testing, clean READMEs, case studies.</p>\n          </div>\n        </div>\n      </section>\n\n      <section class=\"section\" id=\"writing\">\n        <div class=\"section-heading split\">\n          <div>\n            <p class=\"eyebrow\">Writing</p>\n            <h2>Technical notes that show how I think.</h2>\n          </div>\n          <a class=\"text-link\" href=\"#contact\">Suggest topic</a>\n        </div>\n        <div class=\"writing-list\">\n          <article>\n            <p>Article</p>\n            <h3>Building Semantic Search with Azure AI Search</h3>\n            <span>How documents become searchable knowledge.</span>\n          </article>\n          <article>\n            <p>Article</p>\n            <h3>What I Learned Building an AI Interview Bot</h3>\n            <span>Feedback loops, scoring, and product design.</span>\n          </article>\n          <article>\n            <p>Article</p>\n            <h3>FastAPI Dependency Injection in Real Projects</h3>\n            <span>Cleaner APIs and easier testing.</span>\n          </article>\n        </div>\n      </section>\n\n      <section class=\"section contact-section\" id=\"contact\">\n        <div>\n          <p class=\"eyebrow\">Contact</p>\n          <h2>Open to full-stack software engineering roles and AI/backend projects.</h2>\n          <p>\n            I am open to full-stack software engineering roles, backend-heavy product work, AI applications, and teams that value ownership, learning, and practical problem solving.\n          </p>\n        </div>\n        <div class=\"contact-actions\" aria-label=\"Contact links\">\n          <a class=\"button primary\" href=\"mailto:ilmeedesilva@gmail.com\">Email</a>\n          <a class=\"button secondary\" href=\"https://www.linkedin.com/in/ilmeedesilva/\" target=\"_blank\" rel=\"noreferrer\">LinkedIn</a>\n          <a class=\"button secondary\" href=\"https://github.com/ilmeedesilva\" target=\"_blank\" rel=\"noreferrer\">GitHub</a>\n        </div>\n      </section>\n    </main>\n\n    <footer class=\"site-footer\">\n      <div>\n        <a class=\"footer-brand\" href=\"#home\">Ilmee De Silva</a>\n        <p>Full-Stack Software Engineer \u00b7 Backend, AI, APIs, databases and cloud integrations</p>\n      </div>\n      <nav class=\"footer-nav\" aria-label=\"Footer links\">\n        <a href=\"#profile\">Profile</a>\n        <a href=\"#projects\">Projects</a>\n        <a href=\"mailto:ilmeedesilva@gmail.com\">Email</a>\n        <a href=\"https://github.com/ilmeedesilva\" target=\"_blank\" rel=\"noreferrer\">GitHub</a>\n        <a href=\"https://www.linkedin.com/in/ilmeedesilva/\" target=\"_blank\" rel=\"noreferrer\">LinkedIn</a>\n      </nav>\n    </footer>";
 
 export default function PortfolioPage() {
   return (
     <>
-      <StaticMarkup html={portfolioMarkup} />
+      <header className="site-header" data-header>
+            <a className="brand" href="#home" aria-label="Ilmee De Silva home">
+              <img className="nav-avatar" src="/assets/profile.png" alt="Ilmee De Silva" />
+              <span>Ilmee De Silva</span>
+            </a>
+            <button className="nav-toggle" type="button" aria-label="Open navigation" data-nav-toggle>
+              <span></span>
+              <span></span>
+            </button>
+            <nav className="site-nav" data-nav>
+              <a href="#profile">Profile</a>
+              <a href="#projects">Projects</a>
+              <a href="#proof">Proof</a>
+              <a href="#skills">Skills</a>
+              <a href="#writing">Writing</a>
+              <a className="nav-cta" href="#contact">Contact</a>
+              <button className="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false"><span className="theme-icon sun" aria-hidden="true">☼</span><span className="theme-thumb" aria-hidden="true"></span><span className="theme-icon moon" aria-hidden="true">◐</span></button>
+            </nav>
+          </header>
+
+          <main>
+            <section className="hero" id="home" aria-label="Introduction">
+              <img
+                className="hero-image"
+                src="/assets/engineering-hero.png"
+                alt="Modern engineering workspace with code, APIs, database tables, and AI system diagrams"
+              />
+              <div className="hero-overlay"></div>
+              <div className="hero-shell">
+              <div className="hero-content">
+                <p className="eyebrow">Full-Stack Software Engineer | Backend • AI • Cloud</p>
+                <h1><span>Full-Stack Software Engineer</span> focused on Backend, AI & Cloud Systems.</h1>
+                <div className="hero-copy">
+                  <p>
+                    I build reliable backend systems, practical AI-powered applications,
+                    REST APIs, database-driven workflows, and clean full-stack user experiences.
+                  </p>
+                  <p>
+                    My strongest area is backend engineering, with hands-on experience across
+                    APIs, databases, cloud integrations, and intelligent document-based systems.
+                  </p>
+                </div>
+                <div className="hero-actions">
+                  <a className="button primary" href="#projects">View Projects</a>
+                  <a className="button secondary" href="#contact">Get In Touch</a>
+                </div>
+                <dl className="proof-strip" aria-label="Profile highlights">
+                  <div>
+                    <dt>Current Focus</dt>
+                    <dd>Full-stack with backend focus</dd>
+                  </div>
+                  <div>
+                    <dt>Core Stack</dt>
+                    <dd>Python, FastAPI, React, Azure</dd>
+                  </div>
+                  <div>
+                    <dt>Best At</dt>
+                    <dd>APIs, data, cloud and AI</dd>
+                  </div>
+                </dl>
+              </div>
+              <figure className="hero-portrait" aria-label="Profile picture">
+                <div className="portrait-frame">
+                  <img src="/assets/profile.png" alt="Ilmee De Silva" />
+                </div>
+              </figure>
+              </div>
+            </section>
+
+            <section className="section profile-section" id="profile">
+              <div className="section-heading">
+                <p className="eyebrow">Profile</p>
+                <h2>Full-stack capability with a strong backend engineering center.</h2>
+              </div>
+              <div className="profile-panel">
+                <div className="profile-summary">
+                  <p className="profile-kicker">Ilmee De Silva</p>
+                  <h3>Full-Stack Software Engineer mainly focused on backend engineering, AI-powered systems, APIs, databases, and cloud integrations.</h3>
+                  <p>
+                    I can work across the full stack, while my strongest area is designing
+                    reliable backend systems and connecting them to useful, clean user experiences.
+                  </p>
+                </div>
+                <div className="profile-grid">
+                  <a className="profile-item" href="#home"><span className="profile-icon" aria-hidden="true">◌</span><span><strong>Name</strong>Ilmee De Silva</span></a>
+                  <a className="profile-item" href="#projects"><span className="profile-icon" aria-hidden="true">⌘</span><span><strong>Role</strong>Full-Stack Software Engineer</span></a>
+                  <a className="profile-item" href="#skills"><span className="profile-icon" aria-hidden="true">▦</span><span><strong>Main Focus</strong>Backend Engineering</span></a>
+                  <a className="profile-item" href="#contact"><span className="profile-icon" aria-hidden="true">⌖</span><span><strong>Location</strong>Sri Lanka</span></a>
+                  <a className="profile-item" href="tel:+94772909244"><span className="profile-icon" aria-hidden="true">☎</span><span><strong>Phone</strong>+94 77 290 9244</span></a>
+                  <a className="profile-item" href="mailto:ilmeedesilva@gmail.com"><span className="profile-icon" aria-hidden="true">@</span><span><strong>Email</strong>ilmeedesilva@gmail.com</span></a>
+                  <a className="profile-item" href="#skills"><span className="profile-icon" aria-hidden="true">⌂</span><span><strong>Degree</strong>BSc (Hons) in Computing — Software Engineering</span></a>
+                  <a className="profile-item" href="#skills"><span className="profile-icon" aria-hidden="true">✦</span><span><strong>Skills Focus</strong>FastAPI, Python, SQL, React, Next.js, Azure AI, REST APIs</span></a>
+                  <a className="profile-item" href="https://www.linkedin.com/in/ilmeedesilva/" target="_blank" rel="noreferrer"><span className="profile-icon" aria-hidden="true">in</span><span><strong>LinkedIn</strong>linkedin.com/in/ilmeedesilva</span></a>
+                  <a className="profile-item" href="https://github.com/ilmeedesilva" target="_blank" rel="noreferrer"><span className="profile-icon" aria-hidden="true">GH</span><span><strong>GitHub</strong>github.com/ilmeedesilva</span></a>
+                  <a className="profile-item wide" href="#projects"><span className="profile-icon" aria-hidden="true">↗</span><span><strong>Current Focus</strong>Building AI-powered applications and scalable backend systems.</span></a>
+                </div>
+              </div>
+            </section>
+
+            <section className="section" id="projects">
+              <div className="section-heading split">
+                <div>
+                  <p className="eyebrow">Flagship Projects</p>
+                  <h2>Selected work shaped like real products.</h2>
+                </div>
+                <a className="text-link" href="#contact">Request walkthrough</a>
+              </div>
+              <div className="project-grid">
+                <article className="project-card featured">
+                  <div className="card-meta">
+                    <span>In build</span>
+                    <span>Portfolio platform</span>
+                  </div>
+                  <h3>EngineerOS</h3>
+                  <p>
+                    A personal AI engineering platform combining portfolio, case
+                    studies, live demos, writing, and practical career tools in one
+                    polished product experience.
+                  </p>
+                  <div className="project-actions">
+                    <a href="#contact">Discuss roadmap</a>
+                    <a href="#proof">View proof points</a>
+                  </div>
+                  <ul className="tag-list">
+                    <li>Product Design</li>
+                    <li>Backend APIs</li>
+                    <li>AI Workflows</li>
+                    <li>Portfolio System</li>
+                  </ul>
+                </article>
+                <article className="project-card">
+                  <div className="card-meta">
+                    <span>Planned</span>
+                    <span>AI product</span>
+                  </div>
+                  <h3>AI Resume Reviewer</h3>
+                  <p>
+                    Upload a resume and compare it with a job description to surface
+                    missing keywords, weak bullets, ATS gaps, and interview preparation
+                    questions.
+                  </p>
+                  <div className="project-actions">
+                    <a href="./apps/resume-reviewer/">View prototype</a>
+                    <a href="#contact">Walkthrough</a>
+                  </div>
+                  <ul className="tag-list">
+                    <li>FastAPI</li>
+                    <li>OpenAI</li>
+                    <li>Vector Search</li>
+                    <li>Reports</li>
+                  </ul>
+                </article>
+                <article className="project-card">
+                  <div className="card-meta">
+                    <span>Planned</span>
+                    <span>AI coach</span>
+                  </div>
+                  <h3>AI Interview Coach</h3>
+                  <p>
+                    Practice behavioral, technical, and coding interviews with adaptive
+                    follow-up questions, scoring, feedback, and a generated improvement
+                    plan.
+                  </p>
+                  <div className="project-actions">
+                    <a href="#contact">Walkthrough</a>
+                  </div>
+                  <ul className="tag-list">
+                    <li>Speech</li>
+                    <li>Evaluation</li>
+                    <li>Authentication</li>
+                    <li>Dashboards</li>
+                  </ul>
+                </article>
+                <article className="project-card">
+                  <div className="card-meta">
+                    <span>Experience area</span>
+                    <span>Knowledge systems</span>
+                  </div>
+                  <h3>Engineering Knowledge Hub</h3>
+                  <p>
+                    A document intelligence system for uploading PDFs and internal
+                    docs, indexing them, and asking reliable questions over technical
+                    knowledge.
+                  </p>
+                  <div className="project-actions">
+                    <a href="#contact">Walkthrough</a>
+                  </div>
+                  <ul className="tag-list">
+                    <li>Azure AI Search</li>
+                    <li>Embeddings</li>
+                    <li>Blob Storage</li>
+                    <li>RAG</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section className="section band" id="proof">
+              <div className="section-heading">
+                <p className="eyebrow">Proof of Work</p>
+                <h2>Each case study is designed to show judgment, not just screenshots.</h2>
+              </div>
+              <div className="case-grid">
+                <article>
+                  <span>01</span>
+                  <h3>Problem Framing</h3>
+                  <p>
+                    Clear explanation of the user problem, constraints, data flow, and
+                    why the system needs to exist.
+                  </p>
+                </article>
+                <article>
+                  <span>02</span>
+                  <h3>Architecture</h3>
+                  <p>
+                    API boundaries, storage choices, search/indexing approach, AI flow,
+                    and the tradeoffs behind each decision.
+                  </p>
+                </article>
+                <article>
+                  <span>03</span>
+                  <h3>Engineering Quality</h3>
+                  <p>
+                    README, diagrams, tests, deployment notes, performance thinking,
+                    and a usable demo when the project is ready.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section className="section skills-section" id="skills">
+              <div className="section-heading">
+                <p className="eyebrow">Capabilities</p>
+                <h2>Full-stack range with backend, AI, API, database, and cloud depth.</h2>
+              </div>
+              <div className="skills-grid">
+                <div>
+                  <h3>Backend</h3>
+                  <p>Python, FastAPI, REST APIs, service design, validation, integrations, testing.</p>
+                </div>
+                <div>
+                  <h3>Data</h3>
+                  <p>SQL Server, stored procedures, query thinking, data workflows, reporting logic.</p>
+                </div>
+                <div>
+                  <h3>Cloud + AI</h3>
+                  <p>Azure AI Search, Azure OpenAI, embeddings, RAG, Blob Storage, document pipelines.</p>
+                </div>
+                <div>
+                  <h3>Engineering Practice</h3>
+                  <p>Git, Docker basics, API docs, performance testing, clean READMEs, case studies.</p>
+                </div>
+              </div>
+            </section>
+
+            <section className="section" id="writing">
+              <div className="section-heading split">
+                <div>
+                  <p className="eyebrow">Writing</p>
+                  <h2>Technical notes that show how I think.</h2>
+                </div>
+                <a className="text-link" href="#contact">Suggest topic</a>
+              </div>
+              <div className="writing-list">
+                <article>
+                  <p>Article</p>
+                  <h3>Building Semantic Search with Azure AI Search</h3>
+                  <span>How documents become searchable knowledge.</span>
+                </article>
+                <article>
+                  <p>Article</p>
+                  <h3>What I Learned Building an AI Interview Bot</h3>
+                  <span>Feedback loops, scoring, and product design.</span>
+                </article>
+                <article>
+                  <p>Article</p>
+                  <h3>FastAPI Dependency Injection in Real Projects</h3>
+                  <span>Cleaner APIs and easier testing.</span>
+                </article>
+              </div>
+            </section>
+
+            <section className="section contact-section" id="contact">
+              <div>
+                <p className="eyebrow">Contact</p>
+                <h2>Open to full-stack software engineering roles and AI/backend projects.</h2>
+                <p>
+                  I am open to full-stack software engineering roles, backend-heavy product work, AI applications, and teams that value ownership, learning, and practical problem solving.
+                </p>
+              </div>
+              <div className="contact-actions" aria-label="Contact links">
+                <a className="button primary" href="mailto:ilmeedesilva@gmail.com">Email</a>
+                <a className="button secondary" href="https://www.linkedin.com/in/ilmeedesilva/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a className="button secondary" href="https://github.com/ilmeedesilva" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </section>
+          </main>
+
+          <footer className="site-footer">
+            <div>
+              <a className="footer-brand" href="#home">Ilmee De Silva</a>
+              <p>Full-Stack Software Engineer · Backend, AI, APIs, databases and cloud integrations</p>
+            </div>
+            <nav className="footer-nav" aria-label="Footer links">
+              <a href="#profile">Profile</a>
+              <a href="#projects">Projects</a>
+              <a href="mailto:ilmeedesilva@gmail.com">Email</a>
+              <a href="https://github.com/ilmeedesilva" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/ilmeedesilva/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </nav>
+          </footer>
       <PortfolioBehavior />
     </>
   );
