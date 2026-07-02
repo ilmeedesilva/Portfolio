@@ -46,3 +46,29 @@ Open each app's `index.html` directly in the browser, or serve the repo with any
 - Portfolio API
 - Blog
 - Experimental AI Labs
+
+## Resume Reviewer AI Setup
+
+The Resume Reviewer works in two layers:
+
+1. Browser-side document parsing for PDF, DOCX, TXT, Markdown, CSV, and JSON.
+2. Vercel API analysis at `/api/analyze`.
+
+To enable AI analysis in Vercel:
+
+1. Open the Vercel project.
+2. Go to **Settings -> Environment Variables**.
+3. Add:
+
+```text
+OPENAI_API_KEY=your_api_key_here
+```
+
+Optional:
+
+```text
+OPENAI_MODEL=gpt-4.1-mini
+```
+
+Redeploy after adding environment variables. If `OPENAI_API_KEY` is missing,
+the app automatically falls back to local keyword-based analysis.
