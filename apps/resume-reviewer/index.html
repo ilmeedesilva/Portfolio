@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AI Resume Reviewer prototype by Ilmee De Silva. Compare a resume with a job description and get practical feedback."
+    />
+    <title>AI Resume Reviewer | Ilmee De Silva</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="https://ilmeedesilva.vercel.app/">
+        <span>ID</span>
+        <strong>AI Resume Reviewer</strong>
+      </a>
+      <nav>
+        <a href="#review">Review</a>
+        <a href="#how">How It Works</a>
+        <a href="https://ilmeedesilva.vercel.app/">Portfolio</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Flagship AI Product</p>
+          <h1>Match your resume to a role and find what to improve.</h1>
+          <p>
+            Paste a resume and job description to get a quick match score,
+            missing keywords, strengths, weak areas, and interview questions.
+            This prototype uses transparent local analysis before the full AI
+            backend is added.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#review">Start Review</a>
+            <a class="button secondary" href="#how">View Logic</a>
+          </div>
+        </div>
+        <aside class="signal-panel" aria-label="Product signals">
+          <div>
+            <span>Input</span>
+            <strong>Resume + Job Description</strong>
+          </div>
+          <div>
+            <span>Output</span>
+            <strong>Score, gaps, suggestions</strong>
+          </div>
+          <div>
+            <span>Next version</span>
+            <strong>OpenAI feedback + PDF reports</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="review-shell" id="review">
+        <div class="panel input-panel">
+          <div class="section-title">
+            <p class="eyebrow">Review Inputs</p>
+            <h2>Paste the documents</h2>
+          </div>
+          <label for="resume">Resume</label>
+          <textarea id="resume" placeholder="Paste your resume text here..."></textarea>
+          <label for="job">Job description</label>
+          <textarea id="job" placeholder="Paste the job description here..."></textarea>
+          <button class="button primary" type="button" data-analyze>Analyze Match</button>
+        </div>
+
+        <div class="panel result-panel" aria-live="polite">
+          <div class="score-card">
+            <span>Match Score</span>
+            <strong data-score>--</strong>
+            <p data-score-label>Add a resume and job description to begin.</p>
+          </div>
+
+          <div class="result-grid">
+            <section>
+              <h3>Top Missing Keywords</h3>
+              <ul data-missing>
+                <li>Waiting for analysis</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Resume Strengths</h3>
+              <ul data-strengths>
+                <li>Waiting for analysis</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Suggested Improvements</h3>
+              <ul data-suggestions>
+                <li>Waiting for analysis</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Interview Questions</h3>
+              <ul data-questions>
+                <li>Waiting for analysis</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="how" id="how">
+        <div class="section-title">
+          <p class="eyebrow">How It Works</p>
+          <h2>Simple now, AI-powered next.</h2>
+        </div>
+        <div class="how-grid">
+          <article>
+            <span>01</span>
+            <h3>Extract</h3>
+            <p>Reads resume and job text, normalizes words, and removes common filler terms.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Compare</h3>
+            <p>Checks overlap between job keywords and resume content to estimate alignment.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Guide</h3>
+            <p>Turns gaps into practical suggestions and role-specific interview prompts.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built by Ilmee De Silva</p>
+      <a href="https://ilmeedesilva.vercel.app/">Back to portfolio</a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
