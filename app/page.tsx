@@ -56,11 +56,11 @@ export default function PortfolioPage() {
                   </div>
                   <div>
                     <dt>Core Stack</dt>
-                    <dd>Python, FastAPI, React, Azure</dd>
+                    <dd>Python, FastAPI, React.js, Next.js, AWS, Azure</dd>
                   </div>
                   <div>
                     <dt>Best At</dt>
-                    <dd>APIs, data, cloud and AI</dd>
+                    <dd>APIs, data, AWS/Azure cloud and AI</dd>
                   </div>
                 </dl>
               </div>
@@ -94,7 +94,7 @@ export default function PortfolioPage() {
                   <a className="profile-item" href="tel:+94772909244"><span className="profile-icon" aria-hidden="true">☎</span><span><strong>Phone</strong>+94 77 290 9244</span></a>
                   <a className="profile-item" href="mailto:ilmeedesilva@gmail.com"><span className="profile-icon" aria-hidden="true">@</span><span><strong>Email</strong>ilmeedesilva@gmail.com</span></a>
                   <a className="profile-item" href="#skills"><span className="profile-icon" aria-hidden="true">⌂</span><span><strong>Degree</strong>BSc (Hons) in Computing — Software Engineering</span></a>
-                  <a className="profile-item" href="#skills"><span className="profile-icon" aria-hidden="true">✦</span><span><strong>Skills Focus</strong>FastAPI, Python, SQL, React, Next.js, Azure AI, REST APIs</span></a>
+                  <a className="profile-item" href="#skills"><span className="profile-icon" aria-hidden="true">✦</span><span><strong>Skills Focus</strong>FastAPI, Python, Java, JavaScript, TypeScript, SQL Server, React.js, Next.js, Tailwind CSS, AWS, Azure AI, REST APIs</span></a>
                   <a className="profile-item" href="https://www.linkedin.com/in/ilmeedesilva/" target="_blank" rel="noreferrer"><span className="profile-icon" aria-hidden="true">in</span><span><strong>LinkedIn</strong>linkedin.com/in/ilmeedesilva</span></a>
                   <a className="profile-item" href="https://github.com/ilmeedesilva" target="_blank" rel="noreferrer"><span className="profile-icon" aria-hidden="true">GH</span><span><strong>GitHub</strong>github.com/ilmeedesilva</span></a>
                   <a className="profile-item wide" href="#projects"><span className="profile-icon" aria-hidden="true">↗</span><span><strong>Current Focus</strong>Building AI-powered applications and scalable backend systems.</span></a>
@@ -241,7 +241,11 @@ export default function PortfolioPage() {
               <div className="skills-grid">
                 <div>
                   <h3>Backend</h3>
-                  <p>Python, FastAPI, REST APIs, service design, validation, integrations, testing.</p>
+                  <p>Python, FastAPI, Java, REST APIs, service design, validation, integrations, testing.</p>
+                </div>
+                <div>
+                  <h3>Frontend</h3>
+                  <p>React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, responsive UI, accessibility, component-driven pages.</p>
                 </div>
                 <div>
                   <h3>Data</h3>
@@ -249,11 +253,27 @@ export default function PortfolioPage() {
                 </div>
                 <div>
                   <h3>Cloud + AI</h3>
-                  <p>Azure AI Search, Azure OpenAI, embeddings, RAG, Blob Storage, document pipelines.</p>
+                  <p>Azure AI Search, search indexes, Azure OpenAI, embeddings, RAG, Blob Storage, Azure Functions, document pipelines.</p>
+                </div>
+                <div>
+                  <h3>AWS Cloud</h3>
+                  <p>AWS Lambda, S3, CloudWatch, API Gateway basics, IAM basics, serverless workflows, cloud monitoring.</p>
+                </div>
+                <div>
+                  <h3>API Integration</h3>
+                  <p>REST API design, JSON contracts, authentication flows, third-party services, error handling.</p>
+                </div>
+                <div>
+                  <h3>Document AI</h3>
+                  <p>PDF/DOCX parsing, text extraction, semantic search, resume analysis, knowledge workflows.</p>
                 </div>
                 <div>
                   <h3>Engineering Practice</h3>
                   <p>Git, Docker basics, API docs, performance testing, clean READMEs, case studies.</p>
+                </div>
+                <div>
+                  <h3>Deployment + Tools</h3>
+                  <p>GitHub, Vercel, AWS Lambda, S3, CloudWatch, IAM basics, environment variables, browser debugging, release checks.</p>
                 </div>
               </div>
             </section>
@@ -267,21 +287,21 @@ export default function PortfolioPage() {
                 <a className="text-link" href="#contact">Suggest topic</a>
               </div>
               <div className="writing-list">
-                <article>
-                  <p>Article</p>
+                <a className="writing-card" href="/writing/building-semantic-search-with-azure-ai-search">
+                  <span className="writing-thumb"><img src="/assets/blog/semantic-search-cover.png" alt="" /><strong>Engineering Story</strong></span>
                   <h3>Building Semantic Search with Azure AI Search</h3>
-                  <span>How documents become searchable knowledge.</span>
-                </article>
-                <article>
-                  <p>Article</p>
-                  <h3>What I Learned Building an AI Interview Bot</h3>
-                  <span>Feedback loops, scoring, and product design.</span>
-                </article>
-                <article>
-                  <p>Article</p>
-                  <h3>FastAPI Dependency Injection in Real Projects</h3>
-                  <span>Cleaner APIs and easier testing.</span>
-                </article>
+                  <span>Hybrid search, metadata filters, and backend decisions for financial documents.</span>
+                </a>
+                <a className="writing-card" href="/writing/solving-azure-ai-search-index-limits-with-partitioning">
+                  <span className="writing-thumb"><img src="/assets/blog/index-partitioning-cover.png" alt="" /><strong>Architecture</strong></span>
+                  <h3>Solving Azure AI Search Index Limits with a Reusable Partitioning Strategy</h3>
+                  <span>How deterministic bucket routing avoided an index scaling problem.</span>
+                </a>
+                <a className="writing-card" href="/writing/combining-ai-and-algorithmic-search-for-financial-values">
+                  <span className="writing-thumb"><img src="/assets/blog/financial-values-cover.png" alt="" /><strong>Debugging</strong></span>
+                  <h3>Combining AI and Algorithmic Search to Locate Financial Values in Documents</h3>
+                  <span>Improving an existing feature that struggled with small numeric values.</span>
+                </a>
               </div>
             </section>
 
