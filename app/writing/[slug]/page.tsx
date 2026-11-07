@@ -2,6 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArticleInteractions } from '@/components/ArticleInteractions';
+import { SiteFooter } from '@/components/SiteFooter';
+import { SiteHeader } from '@/components/SiteHeader';
+import '../article.css';
 import { articles, getArticle, getArticleNeighbors, getRelatedArticles } from '@/lib/writing';
 
 function sectionId(heading: string) {
@@ -38,10 +41,11 @@ export default async function WritingArticlePage({ params }: { params: Promise<{
   const { previous, next } = getArticleNeighbors(article.slug);
 
   return (
-    <main className="article-page">
+    <>
+    <SiteHeader />
+    <main id="main" className="article-page pt-16">
       <nav className="article-nav" aria-label="Article navigation">
-        <Link href="/#writing">Back to writing</Link>
-        <Link href="/">Portfolio</Link>
+        <Link href="/#writing">← Back to writing</Link>
       </nav>
 
       <div className="article-frame">
@@ -150,5 +154,7 @@ export default async function WritingArticlePage({ params }: { params: Promise<{
         </article>
       </div>
     </main>
+    <SiteFooter />
+    </>
   );
 }
