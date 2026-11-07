@@ -40,7 +40,7 @@ export default async function HomePage() {
                 </span>
               </p>
               <h1 className="mt-6 text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.035em] sm:text-6xl lg:text-[4.2rem]" style={{ textWrap: 'balance' }}>
-                Engineer by trade. <span className="font-serif font-normal italic tracking-normal text-accent-ink">Athlete by training.</span>
+                Engineer by trade. <span className="font-serif font-normal italic tracking-normal text-accent-ink">Disciplined by training.</span>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
                 I’m {site.firstName}, a full-stack software engineer who lives on the backend: Python, FastAPI, Java and microservices on AWS and
@@ -267,11 +267,11 @@ export default async function HomePage() {
                 <Image src="/assets/profile.webp" alt={`Portrait of ${site.name}`} width={720} height={720} sizes="320px" className="aspect-square w-full rounded-3xl object-cover" />
               </div>
               <div>
-                <SectionHead eyebrow="About" title="From international badminton to backend engineering." />
+                <SectionHead eyebrow="About" title="Different path. Same discipline." />
                 <div className="mt-6 max-w-prose space-y-4 text-lg leading-relaxed text-muted">
                   <p>
-                    I was a junior and senior national badminton player and represented Sri Lanka at international championships. After several years
-                    in operations roles I moved into software engineering: diploma as <span className="text-ink">batch top and gold medallist</span>,
+                    Before software, I was a junior and senior national badminton player and represented Sri Lanka internationally. I then spent several
+                    years in operations roles, learning how businesses actually run, before moving into software engineering: a diploma as <span className="text-ink">batch top and gold medallist</span>,
                     then a <span className="text-ink">First Class BSc (Hons) in Computing</span>, while working as an engineer since 2023.
                   </p>
                   <p>

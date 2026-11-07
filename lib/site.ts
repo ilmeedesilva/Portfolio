@@ -4,7 +4,7 @@ export const site = {
   role: 'Full-Stack Software Engineer',
   url: 'https://ilmeedesilva.vercel.app',
   description:
-    'Full-stack software engineer in Colombo, Sri Lanka, and former national badminton player. Backend-focused: Python, FastAPI, Java, microservices, AWS and Azure. I build APIs, LLM agents and architecture tooling that hold up under testing.',
+    'Full-stack software engineer in Colombo, Sri Lanka. Backend-focused: Python, FastAPI, Java, microservices, AWS and Azure. I build APIs, LLM agents and architecture tooling that hold up under testing.',
   location: 'Colombo, Sri Lanka',
   timezone: 'Asia/Colombo',
   email: 'ilmeedesilva@gmail.com',
@@ -32,7 +32,7 @@ export const impact = [
   { value: '3+ yrs', label: 'shipping production backend, cloud and AI systems' },
   { value: 'First Class', label: 'BSc (Hons) in Computing, Coventry University' },
   { value: '30 / 0', label: 'true / false positives for my MESA research on real repos' },
-  { value: 'Intl. athlete', label: 'junior & senior national badminton player for Sri Lanka' },
+  { value: 'Open source', label: 'patchpilot, an AI agent published on PyPI' },
 ];
 
 export type Workstream = { title: string; summary: string; points: string[]; stack: string[]; writing?: string[] };
