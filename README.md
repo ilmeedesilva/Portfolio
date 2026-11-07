@@ -1,74 +1,48 @@
-# Ilmee Engineering Platform
+# ilmeedesilva.vercel.app
 
-This repository is evolving from a personal portfolio into a monorepo of deployable engineering products.
+Personal portfolio of Ilmee De Silva, Full-Stack Software Engineer (backend, AI & cloud).
 
-## Apps
+Built with Next.js 15 (App Router), React 19, TypeScript and Tailwind CSS. Deployed on Vercel.
 
-- Root portfolio: current production portfolio at `ilmeedesilva.vercel.app`
-- `apps/portfolio`: copy of the portfolio for future monorepo deployment
-- `apps/resume-reviewer`: AI Resume Reviewer prototype
+## Run locally
 
-## Recommended Vercel Setup
-
-Keep the current root deployment for the portfolio until you are ready to change it.
-
-To deploy a separate app from this repo:
-
-1. Go to Vercel Dashboard.
-2. Select **Add New -> Project**.
-3. Import the same GitHub repository.
-4. Open **Root Directory**.
-5. Choose the app folder, for example:
-
-```text
-apps/resume-reviewer
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
 ```
 
-6. Deploy it as a separate Vercel project.
+## Where things live
 
-Suggested production domains:
+| What | Where |
+|---|---|
+| Profile, experience, skills, education | `lib/site.ts` |
+| Projects and case studies (`/work/[slug]`) | `lib/projects.ts` |
+| On-site articles (`/writing/[slug]`) | `lib/writing.ts` |
+| GitHub "last updated" dates and dev.to posts, refreshed daily | `lib/live.ts` |
+| Home page | `app/page.tsx` |
+| Design tokens (light/dark) | `app/globals.css`, `tailwind.config.ts` |
+| Downloadable CV | `public/Ilmee-De-Silva-CV.pdf` |
+| AI Resume Reviewer demo | `app/apps/resume-reviewer`, `app/api/analyze` |
 
-```text
-ilmeedesilva.vercel.app
-resume-ilmee.vercel.app
-interview-ilmee.vercel.app
-blog-ilmee.vercel.app
-labs-ilmee.vercel.app
-```
+To add a project, add an entry to `projects` in `lib/projects.ts`. Its card, case-study page, command-menu entry and sitemap entry are generated from that data.
 
-## Local Preview
+## Features
 
-Open each app's `index.html` directly in the browser, or serve the repo with any static server.
+- Hero terminal that replays a real patchpilot run
+- ⌘K / Ctrl+K command menu for jumping to sections, projects and actions
+- Light and dark themes that follow the OS setting, with a manual toggle
+- Filterable project grid and a case-study page for each project
+- Generated Open Graph image, sitemap and robots.txt
+- Respects `prefers-reduced-motion`
 
-## Next Apps
+## Resume Reviewer AI setup
 
-- AI Interview Coach
-- Portfolio API
-- Blog
-- Experimental AI Labs
-
-## Resume Reviewer AI Setup
-
-The Resume Reviewer works in two layers:
-
-1. Browser-side document parsing for PDF, DOCX, TXT, Markdown, CSV, and JSON.
-2. Vercel API analysis at `/api/analyze`.
-
-To enable AI analysis in Vercel:
-
-1. Open the Vercel project.
-2. Go to **Settings -> Environment Variables**.
-3. Add:
+The `/apps/resume-reviewer` demo calls `/api/analyze`. To enable AI analysis, set these in Vercel → Settings → Environment Variables:
 
 ```text
 OPENAI_API_KEY=your_api_key_here
+OPENAI_MODEL=gpt-4.1-mini   # optional
 ```
 
-Optional:
-
-```text
-OPENAI_MODEL=gpt-4.1-mini
-```
-
-Redeploy after adding environment variables. If `OPENAI_API_KEY` is missing,
-the app automatically falls back to local keyword-based analysis.
+Without a key, it falls back to local keyword analysis.

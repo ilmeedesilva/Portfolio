@@ -11,8 +11,8 @@ export default function ResumeReviewerPage() {
     <>
       <link rel="stylesheet" href="/legacy/resume-reviewer.css" />
       <header className="topbar" data-header>
-            <a className="brand" href="https://ilmeedesilva.vercel.app/" aria-label="Ilmee De Silva portfolio">
-              <img className="nav-avatar" src="/assets/profile.png" alt="Ilmee De Silva" />
+            <a className="brand" href="/" aria-label="Ilmee De Silva portfolio">
+              <img className="nav-avatar" src="/assets/profile.webp" alt="Ilmee De Silva" />
               <span>
                 <strong>Ilmee De Silva</strong>
                 <small>AI Resume Reviewer</small>
@@ -22,7 +22,7 @@ export default function ResumeReviewerPage() {
               <a href="#review">Review</a>
               <a href="#results">Results</a>
               <a href="#how">Workflow</a>
-              <a href="https://ilmeedesilva.vercel.app/">Portfolio</a>
+              <a href="/">Portfolio</a>
               <button className="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
                 <span className="theme-icon sun" aria-hidden="true">☼</span>
                 <span className="theme-thumb" aria-hidden="true"></span>
@@ -43,7 +43,7 @@ export default function ResumeReviewerPage() {
                 </p>
                 <div className="hero-actions">
                   <a className="button primary" href="#review">Start Analysis</a>
-                  <a className="button secondary" href="https://ilmeedesilva.vercel.app/#projects">View Portfolio</a>
+                  <a className="button secondary" href="/#work">View Portfolio</a>
                 </div>
               </div>
               <aside className="product-card" aria-label="Product capabilities">
@@ -224,7 +224,7 @@ export default function ResumeReviewerPage() {
               <p>A portfolio product by Ilmee De Silva.</p>
             </div>
             <nav aria-label="Footer navigation">
-              <a href="https://ilmeedesilva.vercel.app/">Portfolio</a>
+              <a href="/">Portfolio</a>
               <a href="https://github.com/ilmeedesilva" target="_blank" rel="noreferrer">GitHub</a>
               <a href="https://www.linkedin.com/in/ilmeedesilva/" target="_blank" rel="noreferrer">LinkedIn</a>
               <a href="mailto:ilmeedesilva@gmail.com">Email</a>
